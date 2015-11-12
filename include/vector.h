@@ -130,7 +130,7 @@ friend Vector operator/(const Vector &our, double number)
 friend std::ostream &operator<<(std::ostream &stream, const Vector &v)
 {
   return stream;
-}  
+}; 
 
 friend double operator^(const Vector &our, const Vector &other)
 {
@@ -159,7 +159,7 @@ private:
 
 bool operator!=(const Vector &our, const Vector &other)
 {
-	return !(our == other)
+	return !(our == other);
 };
 
 #endif // VECTOR_H
