@@ -129,7 +129,7 @@ friend Vector operator/(const Vector &our, double number)
 
 friend std::ostream &operator<<(std::ostream &stream, const Vector &v)
 {
-  return stream
+  return stream;
 }  
 
 friend double operator^(const Vector &our, const Vector &other)
