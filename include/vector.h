@@ -85,11 +85,11 @@ Vector &operator/=(double number)
 	return *this;
 };
 
-friend bool operator==(const Vector &our, const Vector &other)
+friend bool operator==(const Vector &lhs, const Vector &rhs)
 {
 	for (unsigned long i = 0; i < n; ++i)
 	{
-		if (our.coords_[i] != other.coords_[i])
+		if (lhs.coords_[i] != rhs.coords_[i])
 		{
 			return false;
 		}
@@ -129,7 +129,11 @@ friend Vector operator/(const Vector &our, double number)
 
 friend std::ostream &operator<<(std::ostream &stream, const Vector &v)
 {
-  return stream;
+	for (unsigned long i = 0; i < n; i++)
+	{
+		stream<<coords_[i]<<" ";
+	}
+	return stream;
 }; 
 
 friend double operator^(const Vector &our, const Vector &other)
