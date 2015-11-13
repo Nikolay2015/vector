@@ -131,7 +131,7 @@ friend std::ostream &operator<<(std::ostream &stream, const Vector &v)
 {
 	for (unsigned long i = 0; i < n; i++)
 	{
-		stream<<coords_[i]<<" ";
+		stream<<v.coords_[i]<<" ";
 	}
 	return stream;
 }; 
